@@ -65,6 +65,7 @@ from omnivoice.utils.lang_map import LANG_IDS, LANG_NAMES
 from omnivoice.utils.text import add_punctuation, chunk_text_punctuation
 from omnivoice.utils.voice_design import (
     _INSTRUCT_ALL_VALID,
+    _INSTRUCT_CATEGORIES,
     _INSTRUCT_EN_TO_ZH,
     _INSTRUCT_MUTUALLY_EXCLUSIVE,
     _INSTRUCT_VALID_EN,
@@ -1431,7 +1432,7 @@ def _resolve_instruct(
         raise ValueError(err)
 
     # --- Language consistency: dialect forces Chinese, accent forces English ---
-    has_dialect = any(n.endswith("话") for n in normalised)
+    has_dialect = any(n in _INSTRUCT_CATEGORIES[-1] for n in normalised)
     has_accent = any(" accent" in n for n in normalised)
 
     if has_dialect and has_accent:
