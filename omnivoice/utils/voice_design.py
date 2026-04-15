@@ -42,7 +42,9 @@ _INSTRUCT_CATEGORIES = [
      "korean accent", "portuguese accent", "russian accent", "japanese accent"},
     # Dialect (Chinese-only, no English counterpart)
     {"河南话", "陕西话", "四川话", "贵州话", "云南话", "桂林话",
-     "济南话", "石家庄话", "甘肃话", "宁夏话", "青岛话", "东北话"},
+     "济南话", "石家庄话", "甘肃话", "宁夏话", "青岛话", "东北话",
+     "客語四縣腔", "客語海陸腔", "客語大埔腔", "客語饒平腔", "客語詔安腔",
+     "客語南四縣腔"},
 ]
 
 _INSTRUCT_EN_TO_ZH = {}
